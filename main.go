@@ -21,5 +21,6 @@ func main() {
 }
 
 func HelloHandler(w http.ResponseWriter, _ *http.Request) {
+	log.Printlm("Handling a request")
 	fmt.Fprintf(w, "Hello from Koyeb\n")
 }
