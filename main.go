@@ -15,12 +15,11 @@ func main() {
 	}
 
 	http.HandleFunc("/", HelloHandler)
-	log.Println("Listening on prot", "2030")
 	log.Println("Listening on port", port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }
 
 func HelloHandler(w http.ResponseWriter, _ *http.Request) {
 	log.Println("Handling a request")
-	fmt.Fprintf(w, "Hello from Koyeb\n")
+	fmt.Fprintf(w, "Hello from Koyeb, it's nice to meet you.\n")
 }
