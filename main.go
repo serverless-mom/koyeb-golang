@@ -15,7 +15,7 @@ func main() {
 	}
 
 	http.HandleFunc("/", HelloHandler)
-
+	log.Println("Listening on prot", "2030")
 	log.Println("Listening on port", port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }
